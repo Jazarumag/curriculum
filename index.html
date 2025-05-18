@@ -13,7 +13,7 @@
             text-align: center; /* Centrar contenido */
         }
         .Encabezado img {
-            max-width: 100px; /* Ajustar tamaño de la imagen */
+            max-width: 100px;
             border-radius: 50%; /* Hacer la imagen circular */
         }
         .Main {
@@ -32,44 +32,86 @@
 </head>
 <body>
     <div class="Encabezado">
-        <img src="images/profile.jpg"/>
-        <p>Joshua Zaruma</p>
-        <p>Estudiante Ingeniera en Computación</p>
+        <div style="display: flex; align-items: center; justify-content: center; gap: 20px;">
+            <img src="images/profile.jpg" alt="Foto de perfil" />
+            <div style="text-align: left;">
+                <h2 style="margin: 0;">Curriculum Vitae de Joshua Zaruma</h2>
+                <p style="margin: 0;">Estudiante Ingeniera en Computación</p>
+            </div>
+        </div>
     </div>
     <div class="Main">
         <div class="Lateral">
             <h2>Datos de Contacto</h2>
-            <p>Teléfono: +593 98 532 5927</p>
-            <p>Email: joshzaruma@gmail.com</p>
+            <p><img src="images/whatsapp.png" alt="WhatsApp" style="width:20px; vertical-align:middle; margin-right:8px;"/>Teléfono: +593 98 532 5927</p>
+            <p><img src="images/comunicacion.png" alt="Email" style="width:20px; vertical-align:middle; margin-right:8px;"/>Email: joshzaruma@gmail.com</p>
             <h2>Habilidades</h2>
             <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>Python</li>
-                <li>Java</li>
-                <li>SQL</li>
+                <li><strong>Herramientas digitales:</strong>
+                    <ul>
+                        <li>Excel</li>
+                        <li>Word</li>
+                        <li>Power Point</li>
+                        <li>Outlook</li>
+                        <li>Plataformas de Google</li>
+                    </ul>
+                </li>
+                <li><strong>Lenguajes de programación:</strong>
+                    <ul>
+                        <li>Python</li>
+                        <li>Java</li>
+                        <li>R</li>
+                        <li>JavaScript</li>
+                        <li>CSS</li>
+                        <li>Scratch</li>
+                    </ul>
+                </li>
+                <li><strong>Idiomas:</strong>
+                    <ul>
+                        <li>Español (Nativo)</li>
+                        <li>Inglés (C1)</li>
+                        <li>Francés (A1)</li>
+                    </ul>
+                </li>
+            </ul>
         </div>
         <div class="Contenido">
             <h2>Síntesis</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+            <p>
+                Soy estudiante de Ingeniería en Computación en la ESPOL, actualmente en el sexto semestre.<br>
+                Tengo experiencia en herramientas digitales y diversos lenguajes de programación.<br>
+                Me destaco por mi capacidad de aprendizaje y trabajo en equipo.
             </p>
             <h2>Experiencia Laboral</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+            <p>
+                Barista en Cafeteria "VLove Coffee House"<br>
+                <strong>Fecha:</strong> Febrero 2025 - Mayo 2025<br>
+                <strong>Descripción:</strong> Asistencia en la gestión de operaciones diarias, atención al cliente y manejo de inventario.
             </p>
             <h2>Educación</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+            <p>
+                <strong>Educación Secundaria:</strong> Colegio Bilingüe Privado “Interamericano”<br>
+                <strong>Título obtenido:</strong> Bachiller en Ciencias
             </p>
-            <h2>Habilidades</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+            <p>
+                <strong>Educación Superior:</strong> Escuela Superior Politécnica del Litoral (ESPOL)<br>
+                Facultad de Ingeniería Eléctrica y Computación<br>
+                Programa: Ingeniería en Computación<br>
+                Actualmente en sexto semestre
+            </p>
+            <h2>Referencias</h2>
+            <p>Disponibles a solicitud.</p>
+            <h2>Intereses</h2>
+            <ul>
+                <li>Desarrollo de software</li>
+                <li>Desarrollo web</li>
+                <li>Inteligencia artificial</li>
+                <li>Machine learning</li>
+            </ul>
+            <h2>Proyectos</h2>
+            <p>
+                Puedes ver mis proyectos en mi página de GitHub:
+                <a href="https://github.com/Jazarumag" target="_blank">github.com/Jazarumag</a>
             </p>
         </div>
     </div>

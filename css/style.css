@@ -1,0 +1,27 @@
+.Encabezado {
+            padding: 10px; /* Espaciado interno */
+            background-color: #ad9d99; /* Color de fondo inicial */
+            text-align: center; /* Centrar contenido */
+        }
+.Encabezado img {
+    max-width: 100px;
+    border-radius: 50%; /* Hacer la imagen circular */
+}
+.Main {
+    display: flex; 
+}
+.Contenido {
+    flex: 3; /* Ocupa más espacio que el div lateral */
+    padding: 10px; 
+}
+.Lateral {
+    flex: 1; /* Ocupa menos espacio que el div contenido */
+    padding: 10px; 
+    background-color: #f4f4f4; 
+}
+blockquote {
+    background:#f4f4f4;
+    border-left: 5px solid #ad9d99;
+    margin: 20px 0;
+    padding: 10px 20px;
+}

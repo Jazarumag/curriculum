@@ -2,38 +2,25 @@
 <html lang="es">
 <head>
     <title>Curriculum Vitae de Joshua Zaruma</title>
+    <link rel="stylesheet" href="css/style.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+ <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
     <style>
         body {
             font-family: 'Open Sans', sans-serif; /* Establecer Open Sans como fuente predeterminada */
-        }
-        .Encabezado {
-            padding: 10px; /* Espaciado interno */
-            background-color: #ad9d99; /* Color de fondo inicial */
-            text-align: center; /* Centrar contenido */
-        }
-        .Encabezado img {
-            max-width: 100px;
-            border-radius: 50%; /* Hacer la imagen circular */
-        }
-        .Main {
-            display: flex; /* Usar flexbox para organizar los divs en una fila */
-        }
-        .Contenido {
-            flex: 3; /* Ocupa más espacio que el div lateral */
-            padding: 10px; /* Espaciado interno */
-        }
-        .Lateral {
-            flex: 1; /* Ocupa menos espacio que el div contenido */
-            padding: 10px; /* Espaciado interno */
-            background-color: #f4f4f4; /* Color de fondo para diferenciar */
         }
     </style>
 </head>
 <body>
     <div class="Encabezado">
         <div style="display: flex; align-items: center; justify-content: center; gap: 20px;">
-            <img src="images/profile.jpg" alt="Foto de perfil" />
+            <img src="images/profile.jpg" alt="Foto de perfil"/>
             <div style="text-align: left;">
                 <h2 style="margin: 0;">Curriculum Vitae de Joshua Zaruma</h2>
                 <p style="margin: 0;">Estudiante Ingeniera en Computación</p>
@@ -76,20 +63,50 @@
             </ul>
         </div>
         <div class="Contenido">
-            <h2>Síntesis</h2>
-            <p>
+            <nav style="margin-bottom: 20px;">
+                <ul style="display: flex; gap: 20px; list-style: none; padding: 0;">
+                    <li><a href="#sintesis">Síntesis</a></li>
+                    <li><a href="#experiencia">Experiencia Laboral</a></li>
+                    <li><a href="#educacion">Educación</a></li>
+                    <li><a href="#intereses">Intereses</a></li>
+                    <li><a href="#proyectos">Proyectos</a></li>
+                    <li><a href="#referencias">Referencias</a></li>
+                    <li><a href="#contacto">Contáctame</a></li>
+                </ul>
+            </nav>
+            <h2 id="sintesis">Síntesis</h2>
+            <p style="text-align: justify; background-color: #f4f4f4; padding: 10px; border-radius: 5px;">
                 Soy estudiante de Ingeniería en Computación en la ESPOL, actualmente en el sexto semestre.<br>
                 Tengo experiencia en herramientas digitales y diversos lenguajes de programación.<br>
                 Me destaco por mi capacidad de aprendizaje y trabajo en equipo.
             </p>
-            <h2>Experiencia Laboral</h2>
-            <p>
-                Barista en Cafeteria "VLove Coffee House"<br>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/1aGXl2R-zdo?si=L34z7kXOl2vfHgLa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <h2 id="experiencia">Experiencia Laboral</h2>
+            <ol><li><strong>Nombre de la empresa:</strong> "Cafeteria VLove Coffee House"<br></li>
+            <p style="text-align: justify; background-color: #f4f4f4; padding: 10px; border-radius: 5px;">
+                
+                <strong>Cargo:</strong> Barista<br>
                 <strong>Fecha:</strong> Febrero 2025 - Mayo 2025<br>
-                <strong>Descripción:</strong> Asistencia en la gestión de operaciones diarias, atención al cliente y manejo de inventario.
+                <strong>Descripción:</strong> Asistencia en la gestión de operaciones diarias, atención al cliente y manejo de inventario.<br>
+                <strong>Dirección:</strong> 2525 Atlantic Ave, Virginia Beach, VA 23451, Estados Unidos
             </p>
-            <h2>Educación</h2>
-            <p>
+            <!-- Mapa de ubicación del trabajo -->
+            <div id="map" style="height: 250px; border-radius: 8px; margin-bottom: 10px;"></div>
+            <!-- Dirección de la cafetería -->
+            <script>
+                // Inicializa el mapa centrado en la dirección indicada
+                var map = L.map('map').setView([36.852984, -75.977418], 16);
+                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    attribution: '&copy; OpenStreetMap contributors'
+                }).addTo(map);
+                // Marcador en la dirección de la cafetería
+                L.marker([36.852984, -75.977418]).addTo(map)
+                    .bindPopup('2525 Atlantic Ave, Virginia Beach, VA 23451, Estados Unidos')
+                    .openPopup();
+            </script>
+            </ol>
+            <section><h2 id="educacion">Educación</h2>
+            <p></section>
                 <strong>Educación Secundaria:</strong> Colegio Bilingüe Privado “Interamericano”<br>
                 <strong>Título obtenido:</strong> Bachiller en Ciencias
             </p>
@@ -99,21 +116,78 @@
                 Programa: Ingeniería en Computación<br>
                 Actualmente en sexto semestre
             </p>
-            <h2>Referencias</h2>
-            <p>Disponibles a solicitud.</p>
-            <h2>Intereses</h2>
+            <h2 id="intereses">Intereses</h2>
             <ul>
                 <li>Desarrollo de software</li>
                 <li>Desarrollo web</li>
                 <li>Inteligencia artificial</li>
                 <li>Machine learning</li>
             </ul>
-            <h2>Proyectos</h2>
+            <h2 id="proyectos">Proyectos</h2>
             <p>
                 Puedes ver mis proyectos en mi página de GitHub:
                 <a href="https://github.com/Jazarumag" target="_blank">github.com/Jazarumag</a>
             </p>
+            <h2 id="referencias">Referencias</h2>
+            <!-- Testimonio 1 -->
+            <blockquote>
+                “Joshua demostró una gran responsabilidad y compromiso en cada tarea asignada, siempre dispuesto a colaborar y aprender.”
+                <p>
+                    <strong>Nombre:</strong> Ing. Juan Pérez<br>
+                    <strong>Cargo:</strong> Profesor de la ESPOL<br>
+                    <strong>Experiencia:</strong> Trabajé con Joshua en varios proyectos académicos, donde destacó por su liderazgo y habilidades técnicas excepcionales.
+                </p>
+            </blockquote>
+            <!-- Testimonio 2 -->
+            <blockquote>
+                “Su capacidad para resolver problemas y adaptarse a nuevos retos fue clave para el éxito de nuestro equipo.”
+                <p>
+                    <span><span>Nombre:</span>Seda Yumusak</span>
+                    <strong>Cargo:</strong> Gerente de VLove Coffee House<br>
+                    <strong>Testimonio:</strong> Joshua trabajó como barista bajo mi supervisión, mostrando siempre iniciativa y excelente trato con los clientes.
+                </p>
+            </blockquote>
+            <!-- Testimonio 3 -->
+            <blockquote>
+                “Recomiendo a Joshua por su ética profesional y su dedicación en cada proyecto que emprende.”
+                <p>
+                    <strong>Nombre:</strong> Carlos Méndez<br>
+                    <strong>Cargo:</strong> Coordinador de Proyectos TI<br>
+                    <strong>Testimonio:</strong> Colaboré con Joshua en el desarrollo de una aplicación web, donde aportó ideas innovadoras y soluciones eficientes.
+                </p>
+            </blockquote>
+            <fieldset id="contacto">
+                <legend><h2>Contáctame:</h2></legend>
+                <form action="/my-handling-form-page" method="post">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="subject">Asunto:</label>
+                    <select id="subject" name="subject" required>
+                        <option value="consulta">Consulta</option>
+                        <option value="sugerencia">Sugerencia</option>
+                        <option value="reclamo">Reclamo</option>
+                    </select>
+                    <fieldset>
+                        <legend>Preferencia de Contacto:</legend>
+                        <input type="radio" id="email" name="contact" value="email" required>
+                        <label for="email">Email</label>
+                        <input type="radio" id="telefono" name="contact" value="whatsapp" required>
+                        <label for="whatsapp">Teléfono</label>
+                        </fieldset>
+                    <label for="message">Mensaje:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                    <button type="submit">Enviar</button>
+
+                </form>
+            </fieldset>
         </div>
     </div>
 </body>
+<footer>
+    <p style="text-align: center; padding: 10px; background-color: #ad9d99; color: white;">
+        &copy; 2025 Joshua Zaruma. Todos los derechos reservados.
+    </p>
+</footer>
 </html>

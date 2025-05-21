@@ -1,32 +1,62 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Curriculum Vitae de Joshua Zaruma, estudiante de Ingeniería en Computación en ESPOL.">
     <title>Curriculum Vitae de Joshua Zaruma</title>
-    <link rel="stylesheet" href="css/style.css"/>
+    <!-- Fuente: Open Sans -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Leaflet CSS (para mapa interactivo si usas uno) -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-     crossorigin=""/>
- <!-- Make sure you put this AFTER Leaflet's CSS -->
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+        crossorigin=""/>
+
+    <!-- Leaflet JS -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-     crossorigin=""></script>
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+        crossorigin=""></script>
     <style>
-        body {
-            font-family: 'Open Sans', sans-serif; /* Establecer Open Sans como fuente predeterminada */
+        body { font-family: 'Open Sans', sans-serif; }
+        nav ul {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            flex: 1 1 0;
+            text-align: center;
+        }
+        nav ul li a {
+            display: block;
+            padding: 12px 24px;
+            background-color: #ad9d99;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background 0.2s;
+        }
+        nav ul li a:hover {
+            background-color: #c7b8b3;
+            color: #333;
         }
     </style>
 </head>
 <body>
-    <div class="Encabezado">
-        <div style="display: flex; align-items: center; justify-content: center; gap: 20px;">
+    <section class="Encabezado">
+        <div class="profile-section">
             <img src="images/profile.jpg" alt="Foto de perfil"/>
-            <div style="text-align: left;">
-                <h2 style="margin: 0;">Curriculum Vitae de Joshua Zaruma</h2>
-                <p style="margin: 0;">Estudiante Ingeniera en Computación</p>
+            <div class="profile-description">
+                <h2>Curriculum Vitae de Joshua Zaruma</h2>
+                <p>Estudiante Ingeniería en Computación</p>
             </div>
         </div>
-    </div>
+    </section>
     <div class="Main">
         <div class="Lateral">
             <h2>Datos de Contacto</h2>
@@ -75,35 +105,53 @@
                 </ul>
             </nav>
             <h2 id="sintesis">Síntesis</h2>
-            <p style="text-align: justify; background-color: #f4f4f4; padding: 10px; border-radius: 5px;">
-                Soy estudiante de Ingeniería en Computación en la ESPOL, actualmente en el sexto semestre.<br>
-                Tengo experiencia en herramientas digitales y diversos lenguajes de programación.<br>
-                Me destaco por mi capacidad de aprendizaje y trabajo en equipo.
+            <p class="Cuadro">
+                Soy un estudiante de Ingeniería en Computación en la Escuela Superior Politécnica del Litoral (ESPOL), con interés en el desarrollo de software, la interacción humano-computador y las tecnologías web. Me destaco por mi compromiso con el aprendizaje continuo, la creatividad en la resolución de problemas y la capacidad de trabajo en equipo. He participado en proyectos académicos enfocados en la creación de interfaces intuitivas, el análisis de algoritmos y el diseño de experiencias digitales centradas en el usuario. Busco aplicar mis conocimientos en entornos reales para seguir creciendo profesionalmente.
             </p>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/1aGXl2R-zdo?si=L34z7kXOl2vfHgLa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             <h2 id="experiencia">Experiencia Laboral</h2>
-            <ol><li><strong>Nombre de la empresa:</strong> "Cafeteria VLove Coffee House"<br></li>
-            <p style="text-align: justify; background-color: #f4f4f4; padding: 10px; border-radius: 5px;">
-                
-                <strong>Cargo:</strong> Barista<br>
-                <strong>Fecha:</strong> Febrero 2025 - Mayo 2025<br>
-                <strong>Descripción:</strong> Asistencia en la gestión de operaciones diarias, atención al cliente y manejo de inventario.<br>
-                <strong>Dirección:</strong> 2525 Atlantic Ave, Virginia Beach, VA 23451, Estados Unidos
-            </p>
-            <!-- Mapa de ubicación del trabajo -->
-            <div id="map" style="height: 250px; border-radius: 8px; margin-bottom: 10px;"></div>
-            <!-- Dirección de la cafetería -->
-            <script>
-                // Inicializa el mapa centrado en la dirección indicada
-                var map = L.map('map').setView([36.852984, -75.977418], 16);
-                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                    attribution: '&copy; OpenStreetMap contributors'
-                }).addTo(map);
-                // Marcador en la dirección de la cafetería
-                L.marker([36.852984, -75.977418]).addTo(map)
-                    .bindPopup('2525 Atlantic Ave, Virginia Beach, VA 23451, Estados Unidos')
-                    .openPopup();
-            </script>
+            <ol>
+                <li><strong>Nombre de la empresa:</strong> "Cafeteria VLove Coffee House"</li>
+                <p class="Cuadro">
+                    
+                    <strong>Cargo:</strong> Barista<br>
+                    <strong>Fecha:</strong> Febrero 2025 - Mayo 2025<br>
+                    <strong>Descripción:</strong> Asistencia en la gestión de operaciones diarias, atención al cliente y manejo de inventario.<br>
+                    <strong>Dirección:</strong> 2525 Atlantic Ave, Virginia Beach, VA 23451, Estados Unidos
+                </p>
+                <!-- Mapa de ubicación del trabajo (Cafetería) -->
+                <div id="map" style="height: 250px; border-radius: 8px; margin-bottom: 10px;"></div>
+                <script>
+                    // Inicializa el mapa centrado en la dirección de la cafetería
+                    var map = L.map('map').setView([36.852984, -75.977418], 16);
+                    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                        attribution: '&copy; OpenStreetMap contributors'
+                    }).addTo(map);
+                    // Marcador en la dirección de la cafetería
+                    L.marker([36.852984, -75.977418]).addTo(map)
+                        .bindPopup('2525 Atlantic Ave, Virginia Beach, VA 23451, Estados Unidos')
+                        .openPopup();
+                </script>
+                <li><strong>Nombre de la empresa:</strong> "Trinidesarrollo S.A."</li>
+                <p class="Cuadro">
+                    <strong>Cargo:</strong> Profesor Voluntario<br>
+                    <strong>Fecha:</strong> Octubre 2024 - Febrero 2025<br>
+                    <strong>Descripción:</strong> Participación en la enseñanza y desarrollo de actividades educativas en Scratch para niños<br>
+                    <strong>Dirección:</strong> Avenida 10 A SE, Guayaquil 090212, Ecuador
+                </p>
+                <!-- Mapa de ubicación del voluntariado -->
+                <div id="map-voluntariado" style="height: 250px; border-radius: 8px; margin-bottom: 10px;"></div>
+                <script>
+                    // Inicializa el mapa centrado en la dirección del voluntariado
+                    var mapVol = L.map('map-voluntariado').setView([-2.170998, -79.922359], 16);
+                    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                        attribution: '&copy; OpenStreetMap contributors'
+                    }).addTo(mapVol);
+                    // Marcador en la dirección del voluntariado
+                    L.marker([-2.170998, -79.922359]).addTo(mapVol)
+                        .bindPopup('Avenida 10A SE, Guayaquil 090212, Ecuador')
+                        .openPopup();
+                </script>
             </ol>
             <section><h2 id="educacion">Educación</h2>
             <p></section>
@@ -173,8 +221,8 @@
                         <legend>Preferencia de Contacto:</legend>
                         <input type="radio" id="email" name="contact" value="email" required>
                         <label for="email">Email</label>
-                        <input type="radio" id="telefono" name="contact" value="whatsapp" required>
-                        <label for="whatsapp">Teléfono</label>
+                        <input type="radio" id="telefono" name="contact" value="telefono">
+                        <label for="telefono">Teléfono</label>
                         </fieldset>
                     <label for="message">Mensaje:</label>
                     <textarea id="message" name="message" rows="4" required></textarea>

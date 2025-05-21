@@ -1,59 +1,34 @@
 <!DOCTYPE html>
 <html lang="es">
+<link rel="stylesheet"
+  href="https://fonts.googleapis.com/css?family=Font+Name">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Joshua Zaruma">
+    <meta name="keywords" content="Curriculum Vitae, Joshua Zaruma, Ingeniería en Computación, ESPOL, CV">
     <meta name="description" content="Curriculum Vitae de Joshua Zaruma, estudiante de Ingeniería en Computación en ESPOL.">
     <title>Curriculum Vitae de Joshua Zaruma</title>
     <!-- Fuente: Open Sans -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
     <!-- Estilos personalizados -->
     <link rel="stylesheet" href="css/style.css">
-    <!-- Leaflet CSS (para mapa interactivo si usas uno) -->
+    <!-- Leaflet CSS (para mapa interactivo) -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
         integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
         crossorigin=""/>
-
     <!-- Leaflet JS -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
         crossorigin=""></script>
-    <style>
-        body { font-family: 'Open Sans', sans-serif; }
-        nav ul {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        nav ul li {
-            flex: 1 1 0;
-            text-align: center;
-        }
-        nav ul li a {
-            display: block;
-            padding: 12px 24px;
-            background-color: #ad9d99;
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            transition: background 0.2s;
-        }
-        nav ul li a:hover {
-            background-color: #c7b8b3;
-            color: #333;
-        }
-    </style>
 </head>
 <body>
     <section class="Encabezado">
         <div class="profile-section">
-            <img src="images/profile.jpg" alt="Foto de perfil"/>
+            <img id="photo" src="images/profile.jpg" alt="Foto de perfil"/>
             <div class="profile-description">
                 <h2>Curriculum Vitae de Joshua Zaruma</h2>
-                <p>Estudiante Ingeniería en Computación</p>
+                <h4>Estudiante Ingeniería en Computación</h4>
             </div>
         </div>
     </section>
@@ -64,7 +39,7 @@
             <p><img src="images/comunicacion.png" alt="Email" style="width:20px; vertical-align:middle; margin-right:8px;"/>Email: joshzaruma@gmail.com</p>
             <h2>Habilidades</h2>
             <ul>
-                <li><strong>Herramientas digitales:</strong>
+                <li><span id="mini">Herramientas digitales:</span>
                     <ul>
                         <li>Excel</li>
                         <li>Word</li>
@@ -73,7 +48,7 @@
                         <li>Plataformas de Google</li>
                     </ul>
                 </li>
-                <li><strong>Lenguajes de programación:</strong>
+                <li><span id="mini">Lenguajes de programación:</span>
                     <ul>
                         <li>Python</li>
                         <li>Java</li>
@@ -83,7 +58,7 @@
                         <li>Scratch</li>
                     </ul>
                 </li>
-                <li><strong>Idiomas:</strong>
+                <li><span id="mini">Idiomas:</span>
                     <ul>
                         <li>Español (Nativo)</li>
                         <li>Inglés (C1)</li>
@@ -92,24 +67,27 @@
                 </li>
             </ul>
         </div>
-        <div class="Contenido">
-            <nav style="margin-bottom: 20px;">
-                <ul style="display: flex; gap: 20px; list-style: none; padding: 0;">
-                    <li><a href="#sintesis">Síntesis</a></li>
-                    <li><a href="#experiencia">Experiencia Laboral</a></li>
-                    <li><a href="#educacion">Educación</a></li>
-                    <li><a href="#intereses">Intereses</a></li>
-                    <li><a href="#proyectos">Proyectos</a></li>
-                    <li><a href="#referencias">Referencias</a></li>
-                    <li><a href="#contacto">Contáctame</a></li>
-                </ul>
+        <div class="Contenido" >
+            <nav>
+                <table style="width: 100%; margin-bottom: 20px;">
+                    <tr>
+                        <td><a href="#sintesis">Síntesis</a></td>
+                        <td><a href="#experiencia">Experiencia Laboral</a></td>
+                        <td><a href="#educacion">Educación</a></td>
+                        <td><a href="#intereses">Intereses</a></td>
+                        <td><a href="#proyectos">Proyectos</a></td>
+                        <td><a href="#referencias">Referencias</a></td>
+                        <td><a href="#contacto">Contáctame</a></td>
+                    </tr>
+                </table>
             </nav>
-            <h2 id="sintesis">Síntesis</h2>
+            <section><h2 class="subtitle" id="sintesis">Síntesis</h2>
             <p class="Cuadro">
                 Soy un estudiante de Ingeniería en Computación en la Escuela Superior Politécnica del Litoral (ESPOL), con interés en el desarrollo de software, la interacción humano-computador y las tecnologías web. Me destaco por mi compromiso con el aprendizaje continuo, la creatividad en la resolución de problemas y la capacidad de trabajo en equipo. He participado en proyectos académicos enfocados en la creación de interfaces intuitivas, el análisis de algoritmos y el diseño de experiencias digitales centradas en el usuario. Busco aplicar mis conocimientos en entornos reales para seguir creciendo profesionalmente.
             </p>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/1aGXl2R-zdo?si=L34z7kXOl2vfHgLa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <h2 id="experiencia">Experiencia Laboral</h2>
+            </section>
+            <section><h2 class="subtitle" id="experiencia">Experiencia Laboral</h2>
             <ol>
                 <li><strong>Nombre de la empresa:</strong> "Cafeteria VLove Coffee House"</li>
                 <p class="Cuadro">
@@ -153,30 +131,36 @@
                         .openPopup();
                 </script>
             </ol>
-            <section><h2 id="educacion">Educación</h2>
-            <p></section>
-                <strong>Educación Secundaria:</strong> Colegio Bilingüe Privado “Interamericano”<br>
-                <strong>Título obtenido:</strong> Bachiller en Ciencias
-            </p>
-            <p>
-                <strong>Educación Superior:</strong> Escuela Superior Politécnica del Litoral (ESPOL)<br>
-                Facultad de Ingeniería Eléctrica y Computación<br>
-                Programa: Ingeniería en Computación<br>
-                Actualmente en sexto semestre
-            </p>
-            <h2 id="intereses">Intereses</h2>
-            <ul>
-                <li>Desarrollo de software</li>
-                <li>Desarrollo web</li>
-                <li>Inteligencia artificial</li>
-                <li>Machine learning</li>
-            </ul>
-            <h2 id="proyectos">Proyectos</h2>
+            </section>
+            <section><h2 class="subtitle" id="educacion">Educación</h2>
+                <p class="Cuadro">
+                    <strong>Educación Secundaria:</strong> Colegio Bilingüe Privado “Interamericano”<br>
+                    <strong>Título obtenido:</strong> Bachiller en Ciencias
+                </p>
+                <p class="Cuadro">
+                    <strong>Educación Superior:</strong> Escuela Superior Politécnica del Litoral (ESPOL)<br>
+                    Facultad de Ingeniería Eléctrica y Computación<br>
+                    Programa: Ingeniería en Computación<br>
+                    Actualmente en sexto semestre
+                </p>
+            </section>
+            <section>
+            <h2 class="subtitle" id="intereses">Intereses</h2>
+                <ul>
+                    <li>Desarrollo de software</li>
+                    <li>Desarrollo web</li>
+                    <li>Inteligencia artificial</li>
+                    <li>Machine learning</li>
+                </ul>
+            </section>
+            <section>
+            <h2 class="subtitle" id="proyectos">Proyectos</h2>
             <p>
                 Puedes ver mis proyectos en mi página de GitHub:
                 <a href="https://github.com/Jazarumag" target="_blank">github.com/Jazarumag</a>
             </p>
-            <h2 id="referencias">Referencias</h2>
+            </section>
+            <section><h2 class="subtitle" id="referencias">Referencias</h2>
             <!-- Testimonio 1 -->
             <blockquote>
                 “Joshua demostró una gran responsabilidad y compromiso en cada tarea asignada, siempre dispuesto a colaborar y aprender.”
@@ -190,8 +174,8 @@
             <blockquote>
                 “Su capacidad para resolver problemas y adaptarse a nuevos retos fue clave para el éxito de nuestro equipo.”
                 <p>
-                    <span><span>Nombre:</span>Seda Yumusak</span>
-                    <strong>Cargo:</strong> Gerente de VLove Coffee House<br>
+                    <span><span id="mini">Nombre:</span> Seda Yumusak</span>
+                    <span id="mini">Cargo:</span> Gerente de VLove Coffee House<br>
                     <strong>Testimonio:</strong> Joshua trabajó como barista bajo mi supervisión, mostrando siempre iniciativa y excelente trato con los clientes.
                 </p>
             </blockquote>
@@ -204,7 +188,8 @@
                     <strong>Testimonio:</strong> Colaboré con Joshua en el desarrollo de una aplicación web, donde aportó ideas innovadoras y soluciones eficientes.
                 </p>
             </blockquote>
-            <fieldset id="contacto">
+            </section>
+            <section><fieldset id="contacto">
                 <legend><h2>Contáctame:</h2></legend>
                 <form action="/my-handling-form-page" method="post">
                     <label for="name">Nombre:</label>
@@ -227,14 +212,14 @@
                     <label for="message">Mensaje:</label>
                     <textarea id="message" name="message" rows="4" required></textarea>
                     <button type="submit">Enviar</button>
-
                 </form>
             </fieldset>
+            </section>
         </div>
     </div>
 </body>
 <footer>
-    <p style="text-align: center; padding: 10px; background-color: #ad9d99; color: white;">
+    <p>
         &copy; 2025 Joshua Zaruma. Todos los derechos reservados.
     </p>
 </footer>

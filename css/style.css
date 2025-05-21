@@ -1,11 +1,36 @@
+.ruda-ruda {
+  font-family: "Ruda", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+}
+.lora-lora {
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: bold;
+}
+.jaldi-bold {
+  font-family: "Jaldi", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+* {
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+h2 {
+    font-family: "Ruda", sans-serif;
+}
+h4 {
+    font-family: "Lora", serif;
+    font-weight: bold;
+}
+body{
+    background-color: #ff8e3c;
+}
 .Encabezado {
-            padding: 10px; /* Espaciado interno */
-            background-color: #ad9d99; /* Color de fondo inicial */
-            text-align: center; /* Centrar contenido */
-        }
-.Encabezado img {
-    max-width: 100px;
-    border-radius: 50%; /* Hacer la imagen circular */
+    padding: 10px; /* Espaciado interno */
+    background-color: #ff8e3c; /* Color de fondo inicial */
 }
 .profile-section {
     display: flex;
@@ -22,16 +47,16 @@
 }
 .Contenido {
     flex: 3; /* Ocupa más espacio que el div lateral */
-    padding: 10px; 
+    background-color: #fffffe;
 }
 .Lateral {
     flex: 1; /* Ocupa menos espacio que el div contenido */
     padding: 10px; 
-    background-color: #f4f4f4; 
+    background-color: #eff0f3; 
 }
 .Cuadro {
     text-align: justify;
-    background-color: #f4f4f4;
+    background-color: #eff0f3;
     padding: 10px;
     border-radius: 5px;
 }
@@ -42,16 +67,55 @@
     margin-bottom: 10px;
 }
 blockquote {
-    background:#f4f4f4;
-    border-left: 5px solid #ad9d99;
+    background:#eff0f3;
+    border-left: 5px solid #ff8e3c;
     margin: 20px 0;
     padding: 10px 20px;
 }
-nav ul li a {
+td {
     text-decoration: none;
     color: #333;
+    padding: 10px;
+    display: block;
+    background-color: #ff8e3c;
+    transition: background-color 0.3s;
 }
-nav ul li a:hover {
+tr {
+    margin-bottom: 20px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background-color: #ff8e3c;
+}
+td:hover {
     text-decoration: underline;
+    background-color: #f8c8a5;
+    color: #fff;
+
 }
-/* https://drive.google.com/file/d/1KT9X9YmB541DUuLmVwhYGdceStrFhxD9/view?usp=sharing */
+
+#photo {
+    width: 8vw;
+    height: auto;
+    border-radius: 50%;
+}
+#mini{
+    font-weight: bold;
+}
+.subtitle {
+    color: rgb(151 156 165 / 0.89);
+    text-transform: uppercase;
+}
+footer p {
+    text-align: right;
+    font-style: italic;
+    padding: 10px;
+    background-color: #ad9d99;
+    color: white;
+}
+section {
+    border: 0.2pt solid #cedddd;
+    margin: 4px 2px 8px 2px;
+    padding: 1.5% 0.8%;
+    margin-bottom: 1.2rem;
+}
